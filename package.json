@@ -1,0 +1,11 @@
+{
+  "name": "vcf-reader",
+  "description": "A VCF (Variant Call Format) reader in JavaScript (Bioinformatics)",
+  "version": "0.0.1",
+  "keywords": [ "vcf", "variants", "variant", "calling", "call", "format", "sequence", "bioinformatics" ],
+  "author": "Josemi Juanes <josemijuanes@gmail.com>",
+  "main": "./index.js",
+  "repository": { "type": "git", "url": "https://github.com/jmjuanes/vcf-reader.git" },
+  "dependencies": { "pstat": "1.0.2", "readl-async": "0.0.1" },
+  "license": "MIT"
+}
