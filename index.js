@@ -18,7 +18,7 @@ var vcfReader = function(file, opt, cb)
   this._encoding = (typeof opt.encoding === 'undefined') ? 'utf8' : opt.encoding;
 
   //Set the default chunk size
-  this._chunk = 4098;
+  this._chunk = (typeof opt.chunk === 'undefined') ? 4098 : opt.chunk;
 
   //Output object
   this._out = { meta: [], header: [], data: [] };
@@ -34,7 +34,7 @@ vcfReader.prototype.read = function()
   if(pstat.isFileSync(this._file) === false){ return this._cb(new Error('File ' + this._file + ' not found')); }
 
   //Create the file reader
-  var reader = new readl(this._file, { encoding: this._encoding, emptyLines: false, readChunk: this._chunk });
+  var reader = new readl(this._file, { encoding: this._encoding, emptyLines: false, chunk: this._chunk });
 
   //Save this
   var self = this;
